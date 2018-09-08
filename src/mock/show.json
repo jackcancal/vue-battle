@@ -1,0 +1,23 @@
+{
+    "data": {
+        "showEntrance": true,
+        "showGiftWin": false,
+        "newUserGift": {
+            "id": 1004000,
+            "itemId": 1021000,
+            "itemName": "埃及进口长绒棉毛巾",
+            "itemPic": "http://yanxuan.nosdn.127.net/15c8d56c8399c66338ca7a08bbb9ef9e.jpg",
+            "manuDesc": "Ralph Lauren",
+            "giftDesc": "采用优质长绒棉，拥有卓越的吸水性和透气性",
+            "itemSimpleDesc": null,
+            "comparePrice": 199,
+            "activationCode": "ZC7LWHCA",
+            "rank": 4,
+            "reducePrice": 10,
+            "holdFlag": false,
+            "retailPrice": 32,
+            "status": 1
+        }
+    },
+    "code": "200"
+}
