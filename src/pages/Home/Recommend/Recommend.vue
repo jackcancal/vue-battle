@@ -15,7 +15,6 @@
             <a href="javascript:;">
               <img class="g-item-icon" :src="policyDesc.icon"/>
               <span class="g-item-text">{{policyDesc.desc}}</span>
-
             </a>
           </li>
         </ul>
