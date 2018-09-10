@@ -11,7 +11,7 @@
       </header>
     </div>
     <div class="login-main" v-show="!way">
-      <div class="logo-large">
+      <div class="logo-large" :style="{marginTop: downloadShow ? '95.98px' : '43.98px'}">
         <img class="large-img" src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="">
       </div>
       <div class="login-phone" @click="way = 1">
@@ -26,7 +26,7 @@
         手机号快捷注册 >
       </div>
     </div>
-    <div class="login-for-phone" v-show="way === 1">
+    <div class="login-for-phone" v-show="way === 1" :style="{marginTop: downloadShow ? '115.98px' : '63.98px'}">
       <div class="login-for-phone-wrapper">
         <img class="small-img" src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="">
         <div class="input-phone">
@@ -46,7 +46,7 @@
         <div class="register">注册账号 > </div>
       </div>
     </div>
-    <div class="login-for-mail" v-show="way === 2 ">
+    <div class="login-for-mail" v-show="way === 2 " :style="{marginTop: downloadShow ? '115.98px' : '63.98px'}">
       <div class="login-for-phone-wrapper">
         <img class="small-img" src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="">
         <div class="input-phone">
@@ -82,11 +82,28 @@
     },
     methods: {
       toLogin () {
-        if (this.way===1) {
+        if (this.way === 1) {
           const {phone, code} = this
           const phoneReg= /^1(?:3\d|4[4-9]|5[0-35-9]|6[67]|7[013-8]|8\d|9\d)\d{8}$/
           if (!phoneReg.test(phone)){
-            this.errorMsg = '请输入正确格式的手机号'
+            return this.errorMsg = '请输入正确格式的手机号'
+          }else if (code.length!==6) {
+            return this.errorMsg = '请输入6位数验证码'
+          }else {
+            this.$router.replace('/')
+          }
+        }else if (this.way === 2){
+          const {mail, pwd} = this
+          //邮箱正则
+          const mailReg = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+          //密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+          const pwdReg = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+          if (!mailReg.test(mail)){
+            return this.errorMsg = '请输入正确格式的邮箱'
+          } else if (!pwd.test(pwd)) {
+            return this.errorMsg = '请输入正确格式的密码'
+          }else {
+            this.$router.replace('/')
           }
         }
       }
@@ -163,7 +180,7 @@
         width 100%
         height: (204.97*2/$rem);
         padding (160/$rem) (240/$rem)
-        margin-top (43.98*2/$rem)
+        margin-top (95.98*2/$rem)
         box-sizing border-box
         .large-img
           height 100%
