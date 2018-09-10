@@ -1,12 +1,14 @@
 <template>
   <header class="goods-header">
-    <span>品牌制造商直供</span>
+    <span>{{title}}</span>
     <img src="./image/go2.png"/>
   </header>
 </template>
 
 <script>
-  export default {}
+  export default {
+    props:['title']
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

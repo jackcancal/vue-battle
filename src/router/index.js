@@ -4,7 +4,12 @@ import Router from 'vue-router'
 import InterLayer from '../pages/InterLayer/InterLayer.vue'
 import Cart from '../pages/Cart/Cart.vue'
 import Home from '../pages/Home/Home.vue'
+import Suit from '../coponents/Suit/Suit.vue'
+import Recommend from '../pages/Home/Recommend/Recommend.vue'
+
 import Item from '../pages/Item/Item.vue'
+import ItemRouter from '../pages/Item/ItemRouter/ItemRouter.vue'
+
 import Person from '../pages/Person/Person.vue'
 import Topic from '../pages/Topic/Topic.vue'
 
@@ -18,15 +23,53 @@ export default new Router({
     },
     {
       path: '/cart',
-      component: Cart
+      component: Cart,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/',
-      component: Home
+      component: Home,
+      meta: {
+        showFooter: true
+      },
+      children: [
+        {
+          path: '/cate/1005111',
+          component: Recommend,
+          meta: {
+            showFooter: true
+          },
+        },
+        {
+          path: '/cate/:id',
+          component: Suit,
+          meta: {
+            showFooter: true
+          },
+        },{
+          path: '/',
+          redirect: '/cate/1005111'
+        }
+      ]
     },
     {
       path: '/item',
-      component: Item
+      component: Item,
+      children: [
+        {
+          path:'/item/:id',
+          component:ItemRouter,
+          meta: {
+            showFooter: true
+          },
+        },
+        {
+          path:'/item',
+          redirect: '/item/1022001'
+        },
+      ]
     },
     {
       path: '/person',
@@ -34,7 +77,11 @@ export default new Router({
     },
     {
       path: '/topic',
-      component: Topic
+      component: Topic,
+      meta: {
+        showFooter: true
+      },
     },
+
   ]
 })

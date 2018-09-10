@@ -10,7 +10,8 @@
   "level": null,
   "name": "居家",
   "showIndex": 0,
-  "subCateList": [{
+  "subCateList": [
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "夏凉床品，舒适一夏",
@@ -26,7 +27,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/bd17c985bacb9b9ab1ab6e9d66ee343c.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "严格用料，亲肤舒适",
@@ -42,7 +44,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/d77f8cd37529d4fc10932aaf708663bc.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "选用优质材料，确保好芯",
@@ -58,7 +61,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/fb0de30ab423322df3ab3c65f10e51a1.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "一级原木，严苛工艺",
@@ -74,7 +78,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/16b936a40daf74eb36fdefdd361c88b3.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "智慧收纳，抗菌防霉，便利拆卸，小空间的大智慧",
@@ -90,7 +95,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/6fef602bb1214c250ac662bb6cc95e9e.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "换个软装，换个家",
@@ -106,7 +112,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/b0e937f66f164f0c05900fc27d8bc205.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "极简主义，贴近生活的设计",
@@ -122,7 +129,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/f702dc399d14d4e1509d5ed6e57acd19.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "点缀美好生活，品质在于细节",
@@ -138,7 +146,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/227a266e41a477fd28a405b9953ba640.png",
     "wapExpandPicTargetUrl": ""
-  }, {
+  },
+    {
     "bannerUrl": "",
     "extra": null,
     "frontDesc": "出口品质，严选贴合萌宠生活习惯用品。",
@@ -154,7 +163,8 @@
     "type": 0,
     "wapBannerUrl": "http://yanxuan.nosdn.127.net/6ee564543f7cbc140794e68c9ac0e17e.png",
     "wapExpandPicTargetUrl": ""
-  }],
+  }
+  ],
   "superCategoryId": 0,
   "type": 0,
   "wapBannerUrl": "",

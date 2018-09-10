@@ -1,9 +1,9 @@
 <template>
   <div ref="grid">
-    <div class="index-floor" v-for="(item, index) in arr2" :key="index" >
-      <div class="first-new">
-        <div class="first-txt">新品首发</div>
-        <div class="text">
+    <div class="index-floor">
+      <div class="first-new" :style="{backgroundImage: `url(${thisUrl})`}">
+        <div class="first-txt">{{title}}</div>
+        <div class="text" :style="{backgroundColor: `${thisColor}`}">
           <span>查看全部</span>
           <img class="to-show-all" src="./image/new-arrow.png"/>
         </div>
@@ -11,21 +11,25 @@
       <div class="good-grid">
         <div class="scroll-container1">
           <ul class="scroll-wrapper" ref="grid">
-            <li class="scroll-slide" v-for="(item, index) in arr" :key="index">
-              <img class="scroll-img" src="./image/good-grid-img.png">
-              <div class="goods-pref">
-                <span class="pref-txt1"><span>味央特惠</span></span>
-                <span class="pref-txt2"><span>满额减</span></span>
+            <li class="scroll-slide" v-for="(item, index) in list" :key="index">
+              <img class="scroll-img" :src="item.scenePicUrl">
+              <div class="goods-pref" v-if="item.itemTagList.length">
+                <span v-for="(itemTag, index) in item.itemTagList" :key="index">
+                  <span>{{itemTag.name}}</span>
+                </span>
               </div>
               <div class="goods-name">
-                人月团圆 网易味央中秋月饼礼盒（8枚入）
+                {{item.name}}
               </div>
               <div class="goods-surprise">
-                特别的礼，只为更用心的你
+                {{item.simpleDesc}}
               </div>
               <div class="goods-price">
-                ￥138
+                ￥{{item.retailPrice}}
               </div>
+            </li>
+            <li class="scroll-slide scroll-slide-last">
+              <div>查看全部</div>
             </li>
           </ul>
         </div>
@@ -36,10 +40,21 @@
 
 <script>
   export default {
+    props: ['title', 'list', 'index'],
     data () {
       return {
-        arr: [1,2,3,4,5,6,7,8],
-        arr2: [1,2]
+        newItembgUrl: '//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/bitmap-d4f7b37e32.png',
+        popularItembgUrl: '//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/bitmap2-d626e0b52a.png',
+        newItembgColor: 'rgb(216, 229, 241)',
+        popularItembgColor: 'rgb(244, 233, 203)'
+      }
+    },
+    computed: {
+      thisUrl () {
+        return !this.index ? this.newItembgUrl : this.popularItembgUrl
+      },
+      thisColor () {
+        return !this.index ? this.newItembgColor : this.popularItembgColor
       }
     },
     mounted () {
@@ -56,6 +71,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  @import "../../common/stylus/mixins.styl"
   .index-floor
     background-color: #fff;
     margin-bottom 10px
@@ -85,9 +101,9 @@
     .good-grid
       height: 230px
       .scroll-container1
-        width: 1248px
+        width: 1600px
         .scroll-wrapper
-          width: 1248px
+          width: 1600px
           display flex
           padding 0 8px
           .scroll-slide
@@ -98,21 +114,44 @@
             justify-content space-between
             align-items center
             margin 0 8px
+            &.scroll-slide-last
+              height: (280/$rem)
+              width: (280/$rem)
+              background-color: #eee;
+              display flex
+              justify-content center
+              align-items center
+              >div
+                width: 95%
+                height: 95%;
+                display flex
+                justify-content center
+                align-items center
+                line-height (280/$rem)
+                background-color: #fff
+                margin-right (1.5/$rem)
+                margin-bottom  (1.5/$rem)
             .scroll-img
-              height: 140px
-              width: 140px
+              height: (280/$rem)
+              width: (280/$rem)
               background-color: #eee;
               margin-bottom 10px
             .goods-pref
               height: 15px
               font-size 12px
+              width 100%
               color white
+              text-align left
+              box-sizing border-box
+              padding 0 (15/$rem)
+              display flex
               >span
                 background-color: #f48f18
                 display inline-block
                 text-align center
                 height: 15px
                 line-height 15px
+                margin-right (20/$rem)
                 >span
                   display inline-block
                   transform scale(.8)

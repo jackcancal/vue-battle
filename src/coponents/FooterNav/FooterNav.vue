@@ -1,8 +1,8 @@
 <template>
-  <div class="footer">
+  <div class="footer" v-if="$route.meta.showFooter">
     <div class="footer-home">
-      <a href="javascript:;" @click.prevent="$router.replace('/')">
-        <div class="footer-class-icon icon-home" :class="{active: $route.path==='/'}"></div>
+      <a href="javascript:;" @click.prevent="$router.replace('/cate/1005111')">
+        <div class="footer-class-icon icon-home" :class="{active: $route.path==='/cate/1005111'}"></div>
         <span>首页</span>
       </a>
     </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="footer-class">
       <a href="javascript:;" @click.prevent="$router.replace('/item')">
-        <div class="footer-class-icon icon-class" :class="{active: $route.path==='/item'}"></div>
+        <div class="footer-class-icon icon-class" :class="{active: /^\/item/.test($route.path)}"></div>
         <span>分类</span>
       </a>
     </div>

@@ -1,5 +1,5 @@
-{
-  "categoryL1List": [
+
+[
     {
       "bannerUrl": "http://yanxuan.nosdn.127.net/cb225335d4a438564040f00b448e8db8.png",
       "extra": {
@@ -19,7 +19,8 @@
       "level": null,
       "name": "推荐专区",
       "showIndex": 9,
-      "subCateList": [{
+      "subCateList": [
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/1fa42bd292337aaaf80612b6e208099b.png",
         "extra": null,
         "frontDesc": "",
@@ -35,7 +36,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/1fa42bd292337aaaf80612b6e208099b.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/067c602f11acdbc766a35e2ba516a517.png",
         "extra": null,
         "frontDesc": "",
@@ -145,7 +147,8 @@
       "level": null,
       "name": "夏季专区",
       "showIndex": 8,
-      "subCateList": [{
+      "subCateList": [
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/ed6b88d8cf399d11cfc71ffe171069ec.png",
         "extra": null,
         "frontDesc": "",
@@ -161,7 +164,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/ed6b88d8cf399d11cfc71ffe171069ec.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/2d61bf8f674ab60d4258de218b8e8695.png",
         "extra": null,
         "frontDesc": "",
@@ -177,7 +181,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/2d61bf8f674ab60d4258de218b8e8695.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/5fdf61d77c467061ff4cfa05a0a0a7f4.png",
         "extra": null,
         "frontDesc": "",
@@ -193,7 +198,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/5fdf61d77c467061ff4cfa05a0a0a7f4.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/ff52b27b184b5930e1cfde8c7e5233fc.png",
         "extra": null,
         "frontDesc": "",
@@ -209,7 +215,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/ff52b27b184b5930e1cfde8c7e5233fc.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/cfc6528e4caeff34185f556d315bb338.png",
         "extra": null,
         "frontDesc": "",
@@ -225,7 +232,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/cfc6528e4caeff34185f556d315bb338.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/9511685967bfd8dd91eac3a0775778b6.png",
         "extra": null,
         "frontDesc": "",
@@ -241,7 +249,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/9511685967bfd8dd91eac3a0775778b6.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/7826bf97a724fb871e7bdd9703895362.png",
         "extra": null,
         "frontDesc": "",
@@ -257,7 +266,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/7826bf97a724fb871e7bdd9703895362.png",
         "wapExpandPicTargetUrl": ""
-      }, {
+      },
+        {
         "bannerUrl": "http://yanxuan.nosdn.127.net/02d1914d66de3610dad03f07921928d5.png",
         "extra": null,
         "frontDesc": "",
@@ -273,7 +283,8 @@
         "type": 3,
         "wapBannerUrl": "http://yanxuan.nosdn.127.net/02d1914d66de3610dad03f07921928d5.png",
         "wapExpandPicTargetUrl": ""
-      }],
+      }
+      ],
       "superCategoryId": 0,
       "type": 1,
       "wapBannerUrl": "http://yanxuan.nosdn.127.net/e50f6947839c0e3a6c10057e5419f324.jpg",
@@ -2559,4 +2570,4 @@
       "wapExpandPicTargetUrl": "https://m.you.163.com/item/saleRank?categoryId=1065000"
     }
   ]
-}
+
