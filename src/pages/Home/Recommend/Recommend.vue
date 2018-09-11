@@ -115,6 +115,16 @@
           scrollX: true,
           click: true
         })
+        this.BS = new this.$BScroll('.scroll-container', {
+          scrollX: true,
+          click: true
+        })
+      },
+      toTop () {
+        this.BS.scrollTo(0, 0, 500)
+      },
+      toTop2 () {
+        this.BS.scrollTo(0, 0)
       }
     },
     mounted () {
@@ -136,6 +146,7 @@
   @import "../../../common/stylus/mixins.styl"
   .scroll-container
     width 100%
+    height (667*2/$rem)
     box-sizing border-box
     margin-top 126px
     margin-bottom 60px

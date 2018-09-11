@@ -76,20 +76,28 @@
     mounted () {
       this.$store.dispatch('getCate', () => {
         this.$nextTick(() => {
-          new this.$BScroll('.scroll-warp', {
+          this.BS = new this.$BScroll('.scroll-warp', {
             click: true
           })
         })
       })
+    },
+    methods: {
+      toTop () {
+        this.BS.scrollTo(0, 0, 500)
+      },
+      toTop2 () {
+        this.BS.scrollTo(0, 0)
+      }
     }
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  @import "../../common/stylus/mixins.styl"
+  @import "../../../common/stylus/mixins.styl"
   .scroll-warp
     width 100%
-    height: 100%
+    height: (667*2/$rem)
     background-color: #eee
     .scroll-content
       /*margin-top (144/$rem)*/

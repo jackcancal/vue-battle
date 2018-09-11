@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import InterLayer from '../pages/InterLayer/InterLayer.vue'
 import Cart from '../pages/Cart/Cart.vue'
 import Home from '../pages/Home/Home.vue'
-import Suit from '../coponents/Suit/Suit.vue'
+import Suit from '../pages/Home/Suit/Suit.vue'
 import Recommend from '../pages/Home/Recommend/Recommend.vue'
 
 import Item from '../pages/Item/Item.vue'

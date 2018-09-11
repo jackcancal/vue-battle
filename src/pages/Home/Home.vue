@@ -22,9 +22,9 @@
         </div>
       </div>
     </div>
-    <router-view :cateIndex="cateIndex"/>
+    <router-view :cateIndex="cateIndex" ref="rout"/>
     <div class="gift"></div>
-    <div class="to-top"></div>
+    <div class="to-top" @click="toTop"></div>
     <div class="mask" v-if="!isCloseMask">
       <img @click="closeMask" src="//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/modalClose-9365f12572.png" class="close"/>
       <div class="mask-wrapper">
@@ -87,12 +87,17 @@
     },
     methods: {
       goto (e, id, index,) {
+        this.$refs.rout.toTop2()
         this.$router.replace(`/cate/${id}`)
         this.cateIndex = index
         this.navBscroll.scrollToElement(e.currentTarget)
+
       },
       closeMask () {
         this.$store.dispatch('closeMask')
+      },
+      toTop () {
+        this.$refs.rout.toTop()
       }
     },
     computed: {
@@ -180,6 +185,7 @@
       right: 0
       bottom (250/$rem)
     .to-top
+      display block
       width (82/$rem)
       height (82/$rem)
       background-image url("./image/toTop.png")

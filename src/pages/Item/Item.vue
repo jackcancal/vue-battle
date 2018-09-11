@@ -10,7 +10,7 @@
       <div class="item-list-wrapper">
         <div class="item-list-class"
              v-for="(category, index) in categoryList"
-             @click="go(index)"
+             @click="go($event, index)"
              :class="{active: categoryIndex === index}"
              :key="index">
           <span>{{category.name}}</span>
@@ -35,7 +35,7 @@
     mounted () {
       this.$store.dispatch('getCategoryList', () => {
         this.$nextTick(() => {
-          new this.$BScroll('.item-list', {
+          this.BS = new this.$BScroll('.item-list', {
             click: true
           })
         })
@@ -45,7 +45,8 @@
       ...mapState(['categoryList', 'downloadShow'])
     },
     methods: {
-      go (index) {
+      go (e,index) {
+        this.BS.scrollToElement(e.currentTarget)
         this.$router.replace(`/item/${this.categoryList[index].id}`)
         this.categoryIndex = index
       }
@@ -127,6 +128,7 @@
 
     .item-content
       width: (588/$rem)
+      height (667*2/$rem)
       box-sizing border-box
       margin-left (162/$rem)
       margin-top: (87.98/$rem);

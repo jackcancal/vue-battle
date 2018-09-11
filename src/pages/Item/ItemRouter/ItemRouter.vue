@@ -21,6 +21,11 @@
       category () {
         return this.categoryList[this.categoryIndex]
       }
+    },
+    mounted () {
+      new this.$BScroll('.item-router', {
+        click: true
+      })
     }
   }
 </script>
@@ -29,6 +34,7 @@
   @import "../../../common/stylus/mixins.styl"
   .item-router
     width 100%
+    height (500*2/$rem)
     .item-router-container
       width 100%
       .header-img

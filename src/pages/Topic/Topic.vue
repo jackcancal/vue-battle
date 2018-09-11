@@ -260,6 +260,9 @@
             click: true,
             scrollX: true
           })
+          new this.$BScroll('.scroll-container', {
+            click: true,
+          })
         })
       })
     },
@@ -328,7 +331,7 @@
       margin-top: (87.98/$rem);
       margin-bottom: (0/$rem);
       width 100%
-      height 100%
+      height (667*2/$rem)
       .scroll-warp
         width 100%
         margin-bottom 100px
