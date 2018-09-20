@@ -32,7 +32,6 @@
                 <img class="item-new" v-if="showTag.newOnShelf" src="./image/to-new.png"/>
               </div>
             </li>
-
           </ul>
         </div>
         <GoodsGrid title="新品首发" :list="NewItem" ref="newItem" :index="0"/>
